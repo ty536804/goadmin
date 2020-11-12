@@ -1,0 +1,91 @@
+.six_Big{
+    margin: 96px auto 38px auto;
+}
+.sixBig{
+    width: 100%;
+    height: 515px;
+    background: url("http://img.mofashuxue.com/bg_green.png?imageslim");
+    background-size: 100% 515px;
+}
+.sixBig_con{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+.sixBig_conZ{
+    margin-top: 5px;
+}
+.sixBig_conZ img{
+    width: 424px;
+    height: 510px;
+}
+.sixBig_con dl{
+    height: 76px;
+    float: left;
+    margin-bottom: 70px;
+    position: relative;
+}
+.sixBig_con dl dt{
+    background: url("http://img.mofashuxue.com/ico_advantage.png?imageslim");
+    width: 76px;
+    height: 76px;
+    float: left;
+    margin-right: 11px;
+}
+.sixBig_con dl.gj dt{
+    background-position: 304px 152px!important;
+}
+.sixBig_con dl.znxt dt{
+    background-position: 380px 76px!important;
+}
+.sixBig_con dl.qw dt{
+    background-position: 152px 76px!important;
+}
+.sixBig_con dl.sc dt{
+    background-position: 228px 76px!important;
+}
+.sixBig_con dl.yz dt{
+    background-position: 76px 76px!important;
+}
+.sixBig_con h4{
+    height:31px;
+    font-size:24px;
+    font-family:MicrosoftYaHei-Bold,MicrosoftYaHei;
+    font-weight:bold;
+    color:#C01A20;
+    line-height:31px;
+}
+.sixBig_con dd{
+    width: 338px;
+    float: right;
+}
+.sixBig_con p{
+    font-size:16px;
+    font-family:MicrosoftYaHei;
+    color:#333;
+    line-height:26px;
+    margin-top: 13px;
+}
+.sixBig_conL,.sixBig_conR{
+    display: flex;
+    flex-flow: column;
+    width: 370px;
+    margin-top: 46px;
+}
+
+.sixBig_conL dl:last-child,.sixBig_conR dl:last-child{
+    margin-bottom: 0;
+}
+.sixBig_con dd {
+    width: 338px;
+    float: right;
+    position: absolute;
+    top: 0;
+    left: 86px;
+}
+.sixBig_conR p,.znxt p {
+    width: 288px;
+    margin-top: 13px;
+}

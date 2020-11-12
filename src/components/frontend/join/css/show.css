@@ -1,0 +1,15 @@
+.show{
+    margin-top: 56px;
+    margin-bottom: 21px;
+}
+.pic_textbook{
+    width: 100%;
+    justify-content: center;
+}
+.pic_textbook img {
+    height: 538px;
+}
+.ppry{
+    margin-top: 45px;
+    margin-bottom: 61px;
+}

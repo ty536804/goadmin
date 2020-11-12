@@ -1,0 +1,9 @@
+.school {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+.school img {
+    height: 600px;
+}

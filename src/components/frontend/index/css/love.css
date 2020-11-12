@@ -1,0 +1,73 @@
+/*并非改善 而是革新 OMO多维情景授课与学习，让孩子从此更爱说英语*/
+.love{
+    width:100%;
+    height: 938px;
+    background: #F9FAFC;
+    margin-top: 70px;
+}
+.love h3{
+    text-align: center;
+    width: 100%;
+    height: 57px;
+    font-size: 36px;
+    font-family: MicrosoftYaHeiSemibold;
+    color: #333333;
+    line-height: 57px;
+    margin-top: 70px;
+}
+.love_small_tit{
+    text-align: center;
+    width: 100%;
+    height: 57px;
+    font-size: 36px;
+    font-family: MicrosoftYaHeiSemibold;
+    color: #333333;
+    line-height: 57px;
+    margin-bottom: 50px;
+}
+.love_con{
+    width: 1176px;
+    display: flex;
+    flex-flow: row;
+    margin: 0 auto;
+    justify-content: space-between;
+    height: 305px;
+}
+.lcf dl dt,.lcb dl dt{
+    width: 375px;
+    height: 80px;
+    line-height: 80px;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px 10px 0px 0px !important;
+    font-size: 24px;
+    font-weight: bold;
+}
+.lcf dl:first-child dt{
+    background: linear-gradient(270deg, #FF2837 0%, #CB161D 100%);
+    box-shadow: 0px 15px 20px 0px #FFD0D0;
+}
+.lcf dl:nth-child(2) dt{
+    background: linear-gradient(270deg, #FC8E2F 0%, #F85515 100%);
+    border-radius: 10px 10px 0px 0px;
+}
+.lcf dl:last-child dt{
+    background: linear-gradient(270deg, #FBE7AB 0%, #F6CB73 100%);
+    border-radius: 10px 10px 0px 0px;
+}
+.lcb{
+    margin-bottom: 70px;
+    margin-top: 24px;
+}
+.lcb dl:first-child dt{
+    background: linear-gradient(270deg, #22DFDD 0%, #0FBCB8 100%);
+    border-radius: 10px 10px 0px 0px;
+}
+.lcb dl:nth-child(2) dt{
+    background: linear-gradient(270deg, #32ECFD 0%, #17D3FA 100%);
+    border-radius: 10px 10px 0px 0px;
+}
+.lcb dl:last-child dt{
+    background: linear-gradient(270deg, #0282C9 0%, #014B99 100%);
+    border-radius: 10px 10px 0px 0px;
+}

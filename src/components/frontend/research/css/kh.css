@@ -1,0 +1,96 @@
+/*培训&考核*/
+.training h3{
+    width: 100%;
+    height: 48px;
+    font-size: 36px;
+    font-family: MicrosoftYaHeiSemibold;
+    color: #333333;
+    line-height: 48px;
+    display: block;
+    margin: 70px auto 50px auto;
+    text-align: center;
+}
+.training_con{
+    width: 1170px;
+    height: 684px;
+    margin: 0 auto;
+}
+.training_con dl{
+    height: 684px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+.training_con dl dt{
+    width: 700px;
+    height: 490px;
+    position: absolute;
+    z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.training_con dl dt img {
+    transition: all 0.6s;
+    cursor: pointer;
+}
+.training_con dl dt img:hover {
+    transform: scale(1.2);
+}
+.training_con dl:hover dt img:hover{
+  transform: scale(1.2);
+}
+.training_con dl dd{
+    width: 1176px;
+    height: 350px;
+    background: #F9FAFC;
+    border-radius: 10px;
+    position: absolute;
+    top: 334px;
+    transition: all 0.6s;
+    cursor: pointer;
+}
+.training_con dl dd:hover{
+  background: #CB161D;
+}
+.training_con dl dd:hover p,.training_con dl dd:hover h4{
+  color: #fff;
+}
+.training_con h4{
+    width:100%;
+    height: 32px;
+    font-size: 24px;
+    font-family: MicrosoftYaHeiSemibold;
+    color: #C01A20;
+    line-height: 32px;
+    text-align: right;
+    padding: 130px 76px 20px 0 !important;
+}
+.training_con p{
+    width: 767px;
+    font-size: 16px;
+    font-family: MicrosoftYaHei;
+    color: #333333;
+    line-height: 30px;
+    float: right;
+    margin-right: 65px;
+}
+.training_con_t{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.training_b {
+    margin-top: 90px;
+    margin-bottom: 71px;
+}
+.training_con_b{
+    right: 0;
+}
+.training_b h4{
+    text-align: left;
+    padding-left: 76px !important;
+}
+.training_b p {
+    float: left !important;
+    margin-left: 76px;
+    margin-right: 0;
+}

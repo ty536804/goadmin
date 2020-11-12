@@ -1,0 +1,11 @@
+.sync_america{
+    width:100%;
+    height:240px;
+    background:#B8352D;
+    margin-top: 52px;
+    overflow: hidden;
+}
+.sync_america img{
+    height: 216px;
+    margin: 26px auto 0;
+}

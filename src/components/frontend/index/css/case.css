@@ -1,0 +1,84 @@
+/*10万+学员家长选择布罗卡斯智能英语的理由*/
+.checked_warp{
+    width: 100%;
+    height: 530px;
+    background: #CB161D;
+    margin-top: 70px;
+    position: relative;
+}
+.checked_warp h3{
+    width: 100%;
+    text-align: center;
+    height: 48px;
+    font-size: 36px;
+    font-family: MicrosoftYaHeiSemibold;
+    color: #FFFFFF;
+    line-height: 48px;
+    position: absolute;
+    top: 50px;
+}
+.cwl{
+    width: 50%;
+    background: #CB161D url("../img/bg_BROCA.png") no-repeat top 34px  right 155px;
+    background-size: 531px 143px;
+}
+.cwr{
+    width: 50%;
+    background: #014B99 url("../img/bg_ENGLISH.png") no-repeat top 34px  left 152px;
+    background-size: 531px 143px;
+}
+.cwc{
+    width: 370px;
+    margin-right: 221px;
+    text-align: left;
+    float: right;
+    margin-top: 128px;
+}
+.smallTit{
+    width: 100%;
+    height: 32px;
+    font-size: 24px;
+    font-family: MicrosoftYaHeiSemibold;
+    color: #FFFFFF;
+    line-height: 32px;
+}
+.smallSlogan{
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    font-family: MicrosoftYaHei;
+    color: #FFFFFF;
+    line-height: 30px;
+}
+.cwc ul{
+    margin-top: 26px;
+    width: 100%;
+}
+.cwc ul li{
+    margin-bottom: 15px;
+    width: 100%;
+    float: left;
+    height: 30px;
+    font-size: 16px;
+    font-family: MicrosoftYaHei;
+    color: #FFFFFF;
+    line-height: 30px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.cwr .cwc{
+    float: left;
+    margin-left: 228px;
+    text-align: right;
+}
+.cwm{
+    width: 145px;
+    height: 176px;
+    background:url("../img/pic_vs.png") no-repeat 0 0  ;
+    background-size: 145px 176px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,78 @@
+.auto{
+    width:100%;
+    height:1000px;
+}
+.auto_con{
+  width: 1176px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  height: 830px;
+  justify-content: space-between;
+}
+.mt7 {
+  margin-top: 77px !important;
+}
+.auto_detail{
+  width: 376px;
+  height: 360px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  opacity: 0.7;
+  text-align: center;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+.auto_detail:hover {
+  background: #486686;
+}
+.auto_detail:hover dt{
+  display: none;
+}
+.auto_detail:hover dd h3{
+  color: #fff;
+}
+.auto_detail:hover dd span{
+  background: #fff;
+}
+.auto_detail:hover dd ul{
+  display: block;
+  color: #fff !important;
+}
+.auto_detail span{
+  width: 50px;
+  height: 2px;
+  background: #014B99;
+  margin: 15px auto;
+  display: block;
+}
+.auto_detail dt{
+  margin-top: 96px;
+  width: 100%;
+  height: 90px;
+}
+.auto_detail dd h3{
+  margin-top: 33px;
+  width: 100%;
+  height: 32px;
+  font-size: 24px;
+  font-family: MicrosoftYaHeiSemibold;
+  color: #014B99;
+  line-height: 32px;
+}
+.auto_detail dd ul {
+  padding: 25px 31px 0 32px !important;
+  box-sizing: border-box;
+  float: left;
+  width: 100%;
+  display: none;
+}
+.auto_detail dd ul li{
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-family: MicrosoftYaHei;
+  color: #FFFFFF;
+  line-height: 30px;
+}

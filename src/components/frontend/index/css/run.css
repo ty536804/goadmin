@@ -1,0 +1,85 @@
+/*第一代出国潮的推动者*/
+.run_warp{
+    width: 100%;
+    height: 694px;
+    background: #fff;
+    font-size: 36px;
+    font-family: MicrosoftYaHeiSemibold;
+}
+.run_warp h3{
+    width: 100%;
+    text-align: center;
+    margin: 70px auto 50px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 36px;
+}
+.run_con{
+    width: 1176px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.run_con dl{
+    /*margin-bottom: 30px;*/
+    position: relative;
+    border-radius: 10px;
+}
+.run_con dl dt{
+    width: 575px;
+    height: 431px;
+    background-size: 575px 431px;
+}
+
+.run_con dl.teaching dt{
+    width: 575px;
+    height: 431px;
+    background-size: 575px 431px;
+    box-shadow: 0px 5px 23px 0px #E3E3E3;
+    border-radius: 10px 10px 0px 0px;
+}
+.run_con dl dd {
+    width: 100%;
+    line-height: 80px;
+    height: 80px;
+    text-align: center;
+    background: #FFFFFF;
+    box-shadow:0 5px 23px 0 #E3E3E3;
+    font-size: 24px;
+    font-family: MicrosoftYaHeiSemibold;
+    color: #333333;
+    border-radius: 0px 0px 10px 10px;
+}
+.run_con .celebrity_desc{
+    width: 100%;
+    opacity: 0;
+    transform-origin: bottom center;
+    position: absolute;
+    height: 431px;
+    padding:110px 42px 0 50px !important;
+    background:#CB161D;
+    transition: all 0.7s ease 0.1s;
+    font-size:16px;
+    color:#fff;
+    line-height:24px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.run_con dl dt h5{
+    width: 432px;
+    height: 32px;
+    font-size: 24px;
+    font-family: MicrosoftYaHeiSemibold;
+    color: #FFFFFF;
+    line-height: 32px;
+}
+.run_con dl dt p{
+    margin-top: 19px;
+}
+.run_con dl:hover .celebrity_desc{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    opacity: 0.7;
+}

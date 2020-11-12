@@ -1,0 +1,60 @@
+.teaching{
+    width: 1200px;
+    margin: 56px auto 0;
+    text-align: center;
+}
+.teaching .system_list{
+    margin: 0 auto 41px;
+}
+.teaching_l{
+    width: 529px;
+    height: 464px;
+    float: left;
+}
+.teaching_l img{
+    width: 529px;
+    height: 464px;
+}
+.teaching_r{
+    float: right;
+    width: 670px;
+    margin-top: 75px;
+}
+.teaching_con{
+    width: 1200px;
+    margin: 0 auto;
+}
+.teaching_r li{
+    width:312px;
+    height:82px;
+    border-radius:41px;
+    background:#F5EAEA url("../img/ico_checkmark.png") no-repeat left 18px top 18px;
+    background-size: 30px 30px;
+    float: left;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    color:#333;
+}
+
+.teaching_r li p{
+    margin-top: 16px;
+    display: inline-block;
+    font-size:19px;
+    font-family:MicrosoftYaHei-Bold,MicrosoftYaHei;
+    font-weight:bold;
+    line-height:31px;
+    margin-left: 42px;
+    width: 249px;
+    text-align: left;
+}
+.teaching_r li span{
+    height: 30px;
+    font-size: 16px;
+    font-family: MicrosoftYaHei;
+    line-height: 30px;
+    display: inline-block;
+    float: left;
+    text-align: left;
+    text-indent: 54px;
+    box-sizing: content-box;
+}

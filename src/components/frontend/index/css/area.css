@@ -1,0 +1,168 @@
+/* 布罗卡斯语言区理论体系 */
+.subject_warp{
+    width: 100%;
+    background: #fff;
+    height: 723px;
+}
+.subject_warp h3{
+    width: 100%;
+    height: 48px;
+    font-size: 36px;
+    font-family: MicrosoftYaHeiSemibold;
+    color: #333333;
+    line-height: 48px;
+    text-align: center;
+    margin: 69px auto 69px;
+}
+.subjectcon{
+    width: 1176px;
+    height: 501px;
+    margin: 0 auto 155px auto;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+.subject_con_l{
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height:317px;
+    margin-top: 65px;
+}
+.subjectcon:hover{
+    background: #014B99;
+    box-shadow: 0px 5px 23px 0px #A0B8D1;
+    transition: all 0.7s;
+}
+.subjectcon:hover h4{
+    color: #fff;
+}
+.subjectcon:hover .dottedCircle{
+    background: url("../img/dottedcircle2_hover.png") no-repeat;
+    background-size: 145px 145px;
+}
+.subjectcon:hover .dottedcircle1{
+    background: url("../img/dottedcircle2_hover.png") no-repeat;
+    background-size: 117px 117px;
+}
+.subjectcon:hover .pic_brain{
+    background: url("../img/pic_brain@2x.png") no-repeat;
+    background-size: 500px 317px;
+}
+.heart {
+    animation:heartbeat 1s infinite;
+    -webkit-animation:heartbeat 1s infinite;
+    width:92px;
+    height:92px;
+    background: #CB161D;;
+    position:relative;
+    filter:drop-shadow(0px 0px 20px rgb(203, 22, 29));
+    filter: opacity(0.2);
+    transform:rotate(45deg);
+    left:164px;
+    border-radius:50px;
+    top:129px;
+}
+.heart_circle{
+    width: 50px;
+    height: 50px;
+    background: #CB161D;
+    border-radius: 50px;
+    margin-top: 59px;
+    margin-left: 186px;
+    opacity: 0.2;
+}
+@keyframes heartbeat {
+    0% {
+        transform:rotate(45deg) scale(0.8,0.8);
+        opacity:1;
+    }
+    25% {
+        transform:rotate(45deg) scale(1,1);
+        opacity:0.8;
+    }
+    100% {
+        transform:rotate(45deg) scale(0.8,0.8);
+        opacity:1;
+    }
+}
+.dottedCircle {
+    width: 145px;
+    height: 145px;
+    -webkit-transform: rotate(360deg);
+    animation: rotation 8s linear infinite;
+    -moz-animation: rotation 8s linear infinite;
+    -webkit-animation: rotation 8s linear infinite;
+    -o-animation: rotation 8s linear infinite;
+    position: absolute;
+    top:0;
+    left: 19px;
+    background: url("../img/dottedCircle.png") no-repeat 0 0;
+    background-size: 145px 145px;
+}
+.dottedcircle1{
+    width: 117px;
+    height: 117px;
+    display: block;
+    background: url("../img/dottedCircle.png") no-repeat 0 0;
+    /*border: 10px solid #000;*/
+    border-radius: 117px;
+    background-size: 117px 117px;
+    position: absolute;
+    top: 14px;
+    left:33px;
+    animation: dottedrotation 5s linear infinite;
+    -moz-animation: dottedrotation 5s linear infinite;
+    -webkit-animation: dottedrotation 5s linear infinite;
+    -o-animation: dottedrotation 5s linear infinite;
+}
+
+@-webkit-keyframes dottedrotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(-360deg);
+    }
+}
+
+.loop {
+    width: 184px;
+    height: 145px;
+    position: relative;
+    top: 39px;
+    box-sizing: border-box;
+}
+/*top: 65px;*/
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+.loop h4{
+    width: 100%;
+    height: 145px;
+    line-height: 145px;
+    font-size: 32px;
+    font-family: Helvetica;
+    color: #CB161D;
+}
+.pic_brain{
+    margin: 0 0 0 16px;
+    background: url("../img/pic_brain_nor.png") no-repeat 0 0;
+    background-size: 502px 317px;
+    height: 317px;
+    width: 502px;
+}
+.subject_desc{
+    width: 755px;
+    height: 120px;
+    font-size: 16px;
+    font-family: MicrosoftYaHei;
+    color: #FFFFFF;
+    line-height: 30px;
+    margin: 0 auto;
+    text-align: center;
+}

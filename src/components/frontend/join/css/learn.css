@@ -1,0 +1,52 @@
+.learn .system_list{
+    margin: 56px auto 62px auto;
+}
+.pic_toddler_con {
+    width: 1200px;
+    margin: 0 auto;
+    box-sizing: content-box;
+}
+
+.el-image{
+    width: 320px;
+    height: 266px;
+}
+.pic_toddler{
+    margin-bottom: 30px;
+    width: 1200px;
+    height: 266px;
+}
+.pic_toddler li{
+    float: left;
+    margin-left: 20px;
+}
+.pic_toddler li:first-child{
+    margin-right: 57px;
+    margin-left: 0;
+}
+.pic_toddler li:nth-child(1){
+    margin-right: 0;
+}
+
+.fimg .el-image{
+    width: 134px !important;
+}
+
+.pic_children li{
+    float: left;
+    margin-right: 20px;
+}
+.pic_children li:last-child {
+    margin-right: 0;
+    margin-left: 57px;
+}
+.llimg{
+  margin-right: 0 !important;
+}
+.limg .el-image{
+    width: 129px;
+}
+.pic_children{
+    width: 1200px;
+    height: 266px;
+}

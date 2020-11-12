@@ -1,0 +1,67 @@
+.system_list{
+    width: 1200px;
+    margin: 0 auto;
+    height: 47px;
+    overflow: hidden;
+}
+.brand_con_warp{
+    width: 1200px;
+    margin: 44px auto 0;
+    justify-content: center;
+}
+.brand_con_warp .system_list{
+    margin-bottom: 63px;
+}
+.brand_con{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.brand_con_l{
+    background:#172D78 url("http://img.cdn.mofashuxue.com/pic_logo.png?imageslim") no-repeat 0 0;
+    width:476px;
+    height:410px;
+    border-radius:20px;
+    background-position-y:75px;
+    background-position-x:26px ;
+    background-size: 351px 260px;
+}
+.brand_con_r{
+    width:776px;
+    height:330px;
+    background:#B8352D;
+    border-radius:20px;
+    font-size:16px;
+    font-family:MicrosoftYaHei;
+    color:#fff;
+    line-height:30px;
+    right: 0;
+    top: 40px;
+    position: absolute;
+    padding: 29px 100px !important;
+    box-sizing: border-box;
+}
+.tit{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    height:47px;
+    font-size:36px;
+    font-family:MicrosoftYaHei-Bold,MicrosoftYaHei;
+    font-weight:bold;
+    color:#093969;
+    line-height:47px;
+}
+.tit_icon{
+    background: url("../img/ico_slash_l@2x.png") no-repeat 0 0;
+    width: 55px;
+    height: 55px;
+    background-size: 55px 55px;
+    margin-top: -5px;
+}
+.tit span:first-child{
+    margin-right: 35px;
+}
+.tit span:last-child{
+    margin-left: 35px;
+}

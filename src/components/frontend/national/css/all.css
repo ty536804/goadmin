@@ -1,0 +1,319 @@
+.all{
+    width: 100%;
+    margin: 0 auto 57px auto;
+}
+
+.all .all_tit{
+    text-align: center;
+    width: 100%;
+    height:65px;
+    font-size:24px;
+    font-family:MicrosoftYaHei;
+    color:rgba(51,51,51,1);
+    line-height:31px;
+    margin: 0 auto;
+    float: left;
+}
+.search{
+    margin-top: 100px;
+}
+.school_ul{
+    width: 940px;
+    margin: 0 auto;
+}
+.school_ul dl{
+    width:940px;
+    height:286px;
+    border-radius:20px;
+    float: left;
+    background: #EEF9FF;
+    margin-bottom: 50px;
+}
+.school_ul dl dt{
+    width:390px;
+    height:210px;
+    float: left;
+    text-align: left;
+    font-family:MicrosoftYaHei;
+    color:rgba(51,51,51,1);
+    display: inline-block;
+    margin: 30px 0 0 30px;
+}
+.school_ul dl dt h3{
+    width:100%;
+    height:31px;
+    font-size:24px;
+    font-family:MicrosoftYaHei;
+    color:rgba(11,58,108,1);
+    line-height:31px;
+    display: inline-block;
+}
+.shcool_line{
+    width:60px;
+    height:2px;
+    background:rgba(11,58,108,1);
+    border-radius:1px;
+    display: inline-block;
+    margin-top: 15px;
+    float: left;
+}
+.school_ul dl dt p{
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+.school_ul dl dt p.tel{
+    margin-top: 30px;
+}
+.school_ul dl dd{
+    width:480px;
+    height:286px;
+    float: right;
+    display: inline-block;
+    margin: -30px 30px 0 0;
+}
+.school_ul dl dd img{
+    width:480px;
+    height:286px;
+    background: #000;
+}
+.near{
+    width: 100%;
+    text-align: center;
+    height: 78px;
+    font-size: 30px;
+    font-family: MicrosoftYaHei-Bold, MicrosoftYaHei;
+    font-weight: bold;
+    color: #333333;
+    line-height: 40px;
+}
+.near strong{
+    height: 78px;
+    font-size: 65px;
+    font-family: Helvetica-Bold, Helvetica;
+    font-weight: bold;
+    color: #333333;
+    line-height: 78px;
+}
+.num{
+    width: 100%;
+    text-align: center;
+    height: 31px;
+    font-size: 24px;
+    font-family: MicrosoftYaHei;
+    color: #333333;
+    line-height: 31px;
+}
+.near_people{
+    width: 100%;
+    height: 78px;
+    font-size: 30px;
+    font-family: MicrosoftYaHei-Bold, MicrosoftYaHei;
+    font-weight: bold;
+    color: #333333;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 50px;
+}
+.near_people strong{
+    height: 78px;
+    font-size: 65px;
+    font-family: Helvetica-Bold, Helvetica;
+    font-weight: bold;
+    color: #333333;
+    line-height: 78px;
+}
+.map{
+    background: url(http://img.cdn.brocaedu.com/pic_map.png) no-repeat top center;
+    width: 1206px;
+    height: 1281px;
+    background-size: 1206px 1281px;
+    margin: 0 auto;
+}
+.map_icon {
+    position: relative;
+}
+.map_icon li{
+    width: 45px !important;
+    height: 45px;
+    display: inline-block;
+    position: absolute;
+}
+.map_icon li img{
+    width: 45px;
+    height: 45px;
+}
+.qh{
+    margin-top: 480px;
+    margin-left: 359px;
+}
+.gs{
+    margin-top: 438px;
+    margin-left: 512px;
+}
+.xz{
+    /*margin-top: 587px;*/
+    /*margin-left: 444px;*/
+    margin-top: 287px;
+    margin-left: 282px;
+}
+.nmg{
+    margin-top: 315px;
+    margin-left: 683px;
+}
+.nmgT{
+    margin-top: 322px;
+    margin-left: 573px;
+}
+.nmgTh{
+    margin-top: 246px;
+    margin-left: 771px;
+}
+.yn{
+    margin-top: 729px;
+    margin-left: 517px;
+}
+.sc{
+    margin-top: 631px;
+    margin-left: 534px;
+}
+.gz{
+    margin-top: 663px;
+    margin-left: 641px;
+}
+.cq{
+    margin-top: 577px;
+    margin-left: 647px;
+}
+.am{
+    margin-top: 757px;
+    margin-left:739px;
+}
+.amr{
+    margin-top: 738px;
+    margin-left:773px;
+}
+.amt{
+    margin-top: 692px;
+    margin-left: 738px;
+}
+.fj{
+    margin-top: 687px;
+    margin-left: 844px;
+}
+.fjt{
+    margin-top: 654px;
+    margin-left: 789px;
+}
+.hj{
+    margin-top: 541px;
+    margin-left: 730px;
+}
+.hnt{
+    margin-top: 614px;
+    margin-left: 722px;
+}
+.hlj {
+    margin-top: 172px;
+    margin-left: 1031px;
+}
+.hljl {
+    margin-top: 151px;
+    margin-left: 948px;
+}
+.jl{
+    margin-top: 235px;
+    margin-left: 992px;
+}
+.ln{
+    margin-top: 284px;
+    margin-left: 926px;
+}
+.bj{
+    margin-top: 315px;
+    margin-left: 806px;
+}
+.bjl{
+    margin-top: 302px;
+    margin-left: 794px;
+}
+.bjr{
+    margin-top: 302px;
+    margin-left: 834px;
+}
+.bjb{
+    margin-top: 351px;
+    margin-left:794px;
+}
+.bjbr{
+    margin-top: 336px;
+    margin-left:840px;
+}
+.hb{
+    margin-top: 395px;
+    margin-left:772px;
+}
+.hbl{
+    margin-top: 395px;
+    margin-left:756px;
+}
+.hbr{
+    margin-top: 382px;
+    margin-left:817px;
+}
+.sd{
+    margin-top: 414px;
+    margin-left:810px;
+}
+.sdt{
+    margin-top: 382px;
+    margin-left:817px;
+}
+.sdr{
+    margin-top: 395px;
+    margin-left:858px;
+}
+.sdrb{
+    margin-top: 433px;
+    margin-left:854px;
+}
+.sdb{
+    margin-top: 458px;
+    margin-left:829px;
+}
+.sh{
+    margin-top: 538px;
+    margin-left:892px;
+}
+.js{
+    margin-top: 615px;
+    margin-left:857px;
+}
+.jx{
+    margin-top: 654px;
+    margin-left:789px;
+}
+.ah{
+    margin-top: 528px;
+    margin-left:798px;
+}
+.sx{
+    margin-top: 358px;
+    margin-left:727px;
+}
+.sxx{
+    margin-top: 407px;
+    margin-left:675px;
+}
+.nx{
+    margin-top: 475px;
+    margin-left:596px;
+}
+.hns{
+    margin-top: 500px;
+    margin-left:761px;
+}
+.ahs{
+    margin-top: 508px;
+    margin-left:837px;
+}

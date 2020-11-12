@@ -1,0 +1,133 @@
+.eight h3{
+    width: 100%;
+    height: 48px;
+    font-size: 36px;
+    font-family: MicrosoftYaHeiSemibold;
+    color: #333333;
+    line-height: 48px;
+    margin: 60px auto 70px auto;
+    text-align: center;
+}
+.eight_con{
+    width: 1194px;
+    margin: 0 auto 65px auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.eight_con:last-child{
+    margin-bottom: 0;
+}
+.eight_con dl {
+    position: relative;
+    cursor: pointer;
+    width: 276px;
+    height: 310px;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 23px 0px #E3E3E3;
+    border-radius: 10px;
+}
+.eight_con dl .circle{
+    width:150px;
+    height:150px;
+    border:2px dashed #C3D9EE;
+    border-radius: 100px;
+    margin-left: 57.5px;
+}
+.circle_img{
+    transition: all 0.6s;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    opacity: 0;
+}
+.eight_con dl:hover .circle_img{
+    transform: scale(0.4);
+    opacity: 1;
+}
+
+.eight_con_first:hover .circle_img{
+    background:url(../img/ico_teaching_sense.png) no-repeat center center;
+}
+.eight_con_two:hover .ztsjx{
+    background:url(../img/ico_teaching_scene.png) no-repeat center center;
+}
+
+.eight_con_three:hover .jhsjx{
+    background:url(../img/ico_teaching_interactive.png) no-repeat center center !important;
+}
+.eight_con_four:hover .fyjx{
+    background:url(../img/ico_teaching_body.png) no-repeat center center !important;
+}
+.eight_con_five:hover .lxsjx{
+    background:url(../img/ico_teaching_spiral.png) no-repeat center center !important;
+}
+.eight_con_six:hover .sdjx{
+    background:url(../img/ico_teaching_speak.png) no-repeat center center !important;
+}
+.eight_con_seven:hover .gyjx{
+    background:url(../img/ico_teaching_music.png) no-repeat center center !important;
+}
+.eight_con_eight:hover .pdjx{
+    background:url(../img/ico_teaching_spelling.png) no-repeat center center !important;
+}
+
+.eight_con dl h5{
+    width:100%;
+    height:31px;
+    font-size:24px;
+    font-family:MicrosoftYaHei;
+    color:rgba(51,51,51,1);
+    line-height:31px;
+    display: inline-block;
+    margin-top: 0px;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.6s;
+}
+.eight_con dl:hover h5{
+    opacity: 1;
+    margin-top: 15px;
+}
+.eight_con dl h6{
+    width:100%;
+    display: inline-block;
+    text-align: center;
+    height:21px;
+    font-size:16px;
+    font-family:MicrosoftYaHei;
+    color:rgba(102,102,102,1);
+    line-height:21px;
+    transition: all 0.6s;
+}
+.eight_con dl dt{
+    margin-top: 36px;
+}
+.eight_con dl dd{
+    width:62px;
+    height:132px;
+    font-size:100px;
+    font-family:MicrosoftYaHei-Bold,MicrosoftYaHei;
+    font-weight:bold;
+    color:#1E4A94;
+    line-height:132px;
+    position: absolute;
+    top: 36px;
+    right: 108px;
+    transition: all 0.6s;
+}
+.eight_con dl:hover dd {
+    transform: scale(0.6);
+    width: 62px;
+    height: 132px;
+    font-size: 100px;
+    font-family: MicrosoftYaHei-Bold,MicrosoftYaHei;
+    font-weight: bold;
+    line-height: 132px;
+    position: absolute;
+    top: -16px !important;
+    right: 70px !important;
+    opacity:0.3;
+    color: rgba(0,128,203,1);
+}

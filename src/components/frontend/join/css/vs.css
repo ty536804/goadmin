@@ -1,0 +1,105 @@
+.ct{
+    height: 735px;
+}
+.between{
+    margin: 56px auto 48px;
+}
+.ctList{
+    width: 1200px;
+    margin: 0 auto;
+}
+.ct_con{
+    position: relative;
+    width: 1008px;
+    margin: 0 auto;
+    height: 561px;
+}
+.ctL{
+    background: url("http://img.mofashuxue.com/pic_broca.png?imageslim") no-repeat 0 0;
+    width: 561px;
+    height: 680px;
+    background-size: 561px 680px;
+    position: absolute;
+    z-index: 1;
+}
+.ctR{
+    background: url("http://img.mofashuxue.com/pic_tradition.png?imageslim") no-repeat 0 0;
+    width: 561px;
+    height: 674px;
+    background-size: 561px 674px;
+}
+.ctL_con{
+    width: 475px;
+}
+.ctR_con{
+    width: 425px;
+    float: right;
+}
+.ctList h5{
+    margin-top: 236px;
+    width: 100%;
+    text-align: center;
+    height:31px;
+    font-size:24px;
+    font-family:MicrosoftYaHei-Bold,MicrosoftYaHei;
+    font-weight:bold;
+    line-height:31px;
+    display: inline-block;
+    margin-bottom: 21px;
+}
+.ctR_con h5{
+    margin-top:206px !important;
+}
+.ctR_con  h5 span{
+    border-bottom: 2px solid #333;
+}
+.ctL_con h5 span{
+    border-bottom: 2px solid #fff;;
+}
+.ctList ul li{
+    width:100%;
+    height:30px;
+    font-size:16px;
+    font-family:MicrosoftYaHei;
+    line-height:30px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.ctL{
+    color: #fff;
+}
+.ctR{
+    position: absolute;
+    right: 0;
+    top:35px;
+}
+
+.ctM{
+    width:134px;
+    height:347px;
+    background:#0080CB;
+    border-radius:20px;
+    position: absolute;
+    left: 453px;
+    top: 274px;
+    z-index: 3;
+}
+.ctM li{
+    width:100%;
+    height:31px;
+    font-size:24px;
+    font-family:MicrosoftYaHei;
+    color:#fff;
+    line-height:31px;
+    margin-bottom: 24px;
+}
+.ctM li:first-child{
+    margin-top: 15px;
+}
+.childres{
+    width: 100%;
+    justify-content: center;
+}
+.childres img{
+    height: 427px;
+}
