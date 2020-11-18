@@ -89,7 +89,7 @@
                   <el-button
                     size="mini"
                     type="danger"
-                    @click="handleDelete(scope.$index, scope.row,0)">禁止</el-button>
+                    @click="handleDelete(scope.$index, scope.row,2)">禁止</el-button>
                 </template>
                 <template v-else>
                   <el-button
@@ -141,7 +141,7 @@
         <el-form-item label="状态">
           <el-radio-group v-model="addUserForm.statues" >
             <el-radio :label="1">正常</el-radio>
-            <el-radio :label="0">禁用</el-radio>
+            <el-radio :label="2">禁用</el-radio>
           </el-radio-group>
         </el-form-item>
       </el-form>
@@ -156,6 +156,14 @@
 <script>
 export default {
   data() {
+    let sendEmail = (rule, value, callback) => {
+        var regEmail = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
+        if (value !== '' && !regEmail.test(value)) {
+            callback(new Error('邮箱格式不正确'))
+        } else {
+          callback()
+        }
+    };
     return {
       tableData: [],
       total: 0,
@@ -172,25 +180,34 @@ export default {
         email: '',
         pwd: '',
         tel: '',
-        statues: '1',
-        id: ''
+        statues: '2',
+        id: '',
+        timestamp:Date.parse(new Date()) / 1000,
+        version: "v1",
+        client: "pc",
+        sign: window.sessionStorage.getItem("sign")
       },
       // 添加分类表单验证
       addUserRules: {
         nick_name: [
-          { required: true, message: '请添写用户名称', trigger: 'blur' }
+          { required: true, message: '请添写用户名称', trigger: 'blur' },
+          { min: 3, max: 10, message: '长度在 3 到 10 个字符', trigger: 'blur' }
         ],
         login_name: [
-          { required: true, message: '请添写登陆账号', trigger: 'blur' }
+          { required: true, message: '请添写登陆账号', trigger: 'blur' },
+          { min: 3, max: 10, message: '长度在 3 到 10 个字符', trigger: 'blur' }
         ],
         email: [
-          { required: true, message: '请添写邮箱', trigger: 'blur' }
+          { required: true, message: '请添写邮箱', trigger: 'blur' },
+          { validator: sendEmail, trigger: 'blur' }
         ],
         pwd: [
-          { required: true, message: '请添写密码', trigger: 'blur' }
+          { required: true, message: '请添写密码', trigger: 'blur' },
+          { min: 3, max: 10, message: '长度在 3 到 10 个字符', trigger: 'blur' }
         ],
         tel: [
-          { required: true, message: '请添写电话', trigger: 'blur' }
+          { required: true, message: '请添写手机号码', trigger: 'blur' },
+          { min: 11, max: 11, message: '长度在11个字符', trigger: 'blur' }
         ]
       }
     }
@@ -200,11 +217,13 @@ export default {
   },
   methods: {
     async getUser() { // 获取用户列表
-      const { data: res } = await this.$http.get('userData?page=' + this.pagenum)
+      const { data: res } = await this.$http.post('userData?page=' + this.pagenum,this.$qs.stringify(this.setParam()))
       if (res.code === 200) {
         this.tableData = res.data.list
         this.total = res.data.count
         this.pageSize = res.data.size
+      } else {
+        return this.$message.error(res.msg)
       }
     },
     toggleSelection(rows) {
@@ -236,7 +255,7 @@ export default {
         this.addUserForm.pwd = ''
         this.addUserForm.tel = ''
         this.addUserForm.id = ''
-        this.addUserForm.statues = 1
+        this.addUserForm.statues = 2
       }
       this.addCartdialogVisible = true
     },
@@ -257,12 +276,13 @@ export default {
     async updateUser(con = '') {
       var _param = this.addUserForm
       if (con !== '') {
-        _param = con
+        _param = this.addParam(con)
       }
       const { data: res } = await this.$http.post('AddUser', this.$qs.stringify(_param))
       if (res.code === 200) {
-        this.addCartdialogVisible = false
+          this.addCartdialogVisible = false
         if (con === '' && this.addUserForm.id === '') {
+          this.addUserForm.id = res.data
           this.tableData.push(this.$qs.parse(this.addUserForm))
         } else if (this.addUserForm.id !== '') {
           this.updateInitVal(this.addUserForm)
@@ -279,6 +299,7 @@ export default {
       for (const i in con) {
         for (const j in newData) {
           if (i === j) {
+            console.log()
             this.tableData[this.updateKey][j] = newData[j]
           }
         }

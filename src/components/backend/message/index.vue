@@ -112,7 +112,7 @@ export default {
   },
   methods: {
     async getMessage() { // 获取用户列表
-      const { data: res } = await this.$http.get('messageData?page=' + this.pagenum)
+      const { data: res } = await this.$http.post('messageData?page=' + this.pagenum,this.$qs.stringify(this.setParam()))
       if (res.code === 200) {
         this.tableData = res.data.list
         this.total = res.data.count

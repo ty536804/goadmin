@@ -53,20 +53,24 @@ export default {
       this.$refs.loginFormRef.validate(async valid => {
         if (!valid) return false
         // 如果某个方法的返回值是promise，用await简化这次promise操作
-        // const param = this.loginForm
         const param = {
           uname: this.loginForm.uname,
           pword: this.loginForm.pword,
-          timestamp: Date.parse(new Date()),
-          version: 'v1'
+          timestamp: Date.parse(new Date()) / 1000,
+          version: 'v1',
+          client:'pc',
+          sign:""
         }
+        var _sgin = this.getParam()
         var that = this;
         const { data: res } = await this.$http.post('login', this.$qs.stringify(param))
         if (res.code !== 200) {
           return this.$message.error(res.msg)
         }
-        // window.sessionStorage.setItem('token', res.data)
-        this.$router.push('/welcome')
+        if (res.code === 200 && _sgin ==res.msg) {
+          window.sessionStorage.setItem('sign', _sgin.toString())
+          this.$router.push('/welcome')
+        }
       })
     }
   }

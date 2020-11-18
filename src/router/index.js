@@ -15,27 +15,11 @@ import NewsDetail from '@/components/backend/article/detail.vue'
 import Single from '@/components/backend/single/index.vue'
 import SingleDetail from '@/components/backend/single/detail.vue'
 import Campus from '@/components/backend/campus/index.vue'
-import Index from '@/components/frontend/index.vue'
-import Subject from '@/components/frontend/subject.vue'
-import Research from '@/components/frontend/research.vue'
-import Learn from '@/components/frontend/learn.vue'
-import National from '@/components/frontend/national.vue'
-import Join from '@/components/frontend/join.vue'
-import Press from '@/components/frontend/press.vue'
-import Detail from '@/components/frontend/detail.vue'
 
 Vue.use(Router)
 
 const routes = [
-  { path: '/', component: Index },
-  { path: '/subject', component: Subject },
   { path: '/login', component: Login },
-  { path: '/research', component: Research },
-  { path: '/learn', component: Learn },
-  { path: '/national', component: National },
-  { path: '/join', component: Join },
-  { path: '/press', component: Press },
-  { path: '/detail', component: Detail },
   {
     path: '/home',
     component: Home,

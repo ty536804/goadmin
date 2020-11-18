@@ -6,7 +6,7 @@
         <!-- <img src="../assets/img/logo.png" alt="布卢卡斯" class="logo"> -->
         <span class="headTit">易乐教育-布卢卡斯</span>
       </div>
-      <div class="taggle-button" @click="toggleCollapse">|||</div>
+      <!-- <div class="taggle-button" @click="toggleCollapse">|||</div> -->
       <el-button type="infor" @click="logout">退出</el-button>
     </el-header>
     <!-- 页面主体区 -->
@@ -65,6 +65,9 @@ export default {
     }
   },
   created () {
+    if (this.getSign()) {
+      this.$router.push('/login')
+    }
     this.getMenuList()
     this.avitvePath = window.sessionStorage.getItem('activePath')
   },
@@ -74,7 +77,14 @@ export default {
       this.$router.push('/login')
     },
     async getMenuList () {
-      const { data: res } = await this.$http.post('/menus')
+      var _sgin = this.getParam()
+      const param = {
+        timestamp: Date.parse(new Date()) / 1000,
+        version: 'v1',
+        client:'pc',
+        sign:_sgin.toString()
+      }
+      const { data: res } = await this.$http.post('/menus',this.$qs.stringify(param))
       this.menuList = res.data
     },
     // 点击按钮 展开与收缩

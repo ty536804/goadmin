@@ -96,7 +96,11 @@ export default {
         nav_id: '',
         summary: '',
         content: '',
-        thumb_img: ''
+        thumb_img: '',
+        timestamp:Date.parse(new Date()) / 1000,
+        version: "v1",
+        client: "pc",
+        sign: window.sessionStorage.getItem("sign")
       },
       addSingleRules: {
         name: [
@@ -140,7 +144,8 @@ export default {
       this.addSingleForm.nav_id = this.bposition[command].id
     },
     async getSingle(id) {
-      const { data: res } = await this.$http.post('getSingle?id='+id)
+	  let _param = this.addParam({"id":id})
+      const { data: res } = await this.$http.post('getSingle',this.$qs.stringify(_param))
       if (res.code === 200) {
         this.addSingleForm.name = res.data.detail.name
         this.addSingleForm.summary = res.data.detail.summary
@@ -161,6 +166,7 @@ export default {
         if (!valid) return false
         const { data: res } = await this.$http.post('addSingle', this.$qs.stringify(this.addSingleForm))
         if (res.code === 200) {
+          this.$router.push('/single')
           return this.$message.success(res.msg)
         } else {
           return this.$message.error(res.msg)
@@ -184,6 +190,10 @@ export default {
       const form = new FormData();
       // 文件对象
       form.append("file", file);
+      form.append("timestamp", Date.parse(new Date()) / 1000);
+      form.append("version", "v1");
+      form.append("client", "pc");
+      form.append("sign", window.sessionStorage.getItem("sign"));
       var that = this;
       this.$http({
         method: "post",

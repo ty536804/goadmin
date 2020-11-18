@@ -68,7 +68,11 @@ export default {
         site_address: '',
         record_number: '',
         admin_tel: '',
-        id: 0
+        id: 0,
+        timestamp:Date.parse(new Date()) / 1000,
+        version: "v1",
+        client: "pc",
+        sign: window.sessionStorage.getItem("sign")
       },
       siteRule: {
         site_title: [
@@ -97,7 +101,7 @@ export default {
   },
   methods: {
     async getSiteInfo() {
-      const { data: res } = await this.$http.get('getSite')
+      const { data: res } = await this.$http.post('getSite',this.$qs.stringify(this.setParam()))
       if (res.code === 200) {
         this.site.site_title = res.data.site_title
         this.site.site_desc = res.data.site_desc

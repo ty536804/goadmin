@@ -141,6 +141,24 @@ export default {
       pageSize: 10,
       pagenum: 1,
       updateKey: 0,
+      addArticleForm: {
+        title: '',
+        summary: '',
+        id: '',
+        type: '',
+        nav_id: '',
+        thumb_img: '',
+        admin: '',
+        hot: 1,
+        content: '',
+        sort: '',
+        is_show: 1,
+        com: '',
+        timestamp:Date.parse(new Date()) / 1000,
+        version: "v1",
+        client: "pc",
+        sign: window.sessionStorage.getItem("sign")
+      },
     }
   },
   created() {
@@ -155,7 +173,7 @@ export default {
       }
     },
     async getNews() { // 获取用户列表
-      const { data: res } = await this.$http.post('articleList?page=' + this.pagenum)
+      const { data: res } = await this.$http.post('articleList?page=' + this.pagenum,this.$qs.stringify(this.setParam()))
       if (res.code === 200) {
         this.tableData = res.data.list
         this.total = res.data.count
@@ -163,7 +181,18 @@ export default {
       }
     },
     async handleDelete (index, con, statues) { // 编辑 开启
-      const { data: res } = await this.$http.post('editStatus?id='+con.id+'&is_show='+statues)
+    this.addArticleForm.title = con.title
+    this.addArticleForm.nav_id = con.nav_id
+    this.addArticleForm.com = con.com
+    this.addArticleForm.summary = con.summary
+    this.addArticleForm.thumb_img =con.thumb_img
+    this.addArticleForm.admin = con.admin
+    this.addArticleForm.hot = con.hot
+    this.addArticleForm.sort = con.sort
+    this.addArticleForm.content = con.content
+    this.addArticleForm.is_show = statues
+    this.addArticleForm.id = index
+      const { data: res } = await this.$http.post('addArticle',this.$qs.stringify(this.addArticleForm))
       if (res.code === 200) {
         this.tableData[index].is_show = statues // 局部刷新
         return this.$message.success(res.msg)

@@ -82,6 +82,13 @@
              </el-tag>
            </template>
           </el-table-column>
+          <el-table-column
+            prop="tag"
+            label="标签"
+            width="80"
+            sortable
+            align="center">
+          </el-table-column>
           <el-table-column label="操作" align="center">
             <template slot-scope="scope">
               <el-button
@@ -132,7 +139,7 @@ export default {
       }
     },
     async getSingleList() { // 获取用户列表
-      const { data: res } = await this.$http.post('singleList?page=' + this.pagenum)
+      const { data: res } = await this.$http.post('singleList?page=' + this.pagenum,this.$qs.stringify(this.setParam()))
       if (res.code === 200) {
         this.tableData = res.data.list
         this.total = res.data.count

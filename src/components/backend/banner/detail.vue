@@ -94,7 +94,11 @@ export default {
         bposition: '',
         imgurl: '',
         info: '',
-        is_show: 1
+        is_show: 1,
+        timestamp:Date.parse(new Date()) / 1000,
+        version: "v1",
+        client: "pc",
+        sign: window.sessionStorage.getItem("sign")
       },
       addBannerRules: {
         bname: [
@@ -138,7 +142,7 @@ export default {
       this.addBannerForm.bposition = this.bposition[command].id
     },
     async getBanner(id) {
-      const { data: res } = await this.$http.get('getBanner?id='+id)
+      const { data: res } = await this.$http.post('getBanner?id='+id,this.$qs.stringify(this.setParam()))
       if (res.code === 200) {
         this.addBannerForm.bname = res.data.detail.bname
         this.addBannerForm.tag = res.data.detail.tag
@@ -151,6 +155,7 @@ export default {
         this.bposition = res.data.list
         this.fileList = id === 0 ? [] : [{name: res.data.detail.bname,url:res.data.detail.imgurl}],
         this.addBannerForm.info = res.data.detail.info
+        this.addBannerForm.imgurl = res.data.detail.imgurl
       }
     },
     onSubmit() {
@@ -183,6 +188,10 @@ export default {
           const form = new FormData();
           // 文件对象
           form.append("file", file);
+          form.append("timestamp", Date.parse(new Date()) / 1000);
+          form.append("version", "v1");
+          form.append("client", "pc");
+          form.append("sign", window.sessionStorage.getItem("sign"));
           var that = this;
           this.$http({
             method: "post",

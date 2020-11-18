@@ -66,7 +66,7 @@
                   <el-button
                     size="mini"
                     type="danger"
-                    @click="handleDelete(scope.$index, scope.row,0)">禁止</el-button>
+                    @click="handleDelete(scope.$index, scope.row,2)">禁止</el-button>
                 </template>
                 <template v-else>
                   <el-button
@@ -133,7 +133,11 @@ export default {
         name: '',
         base_url: '',
         is_show: 1,
-        id: ''
+        id: '',
+        timestamp:Date.parse(new Date()) / 1000,
+        version: "v1",
+        client: "pc",
+        sign: window.sessionStorage.getItem("sign")
       },
       // 添加分类表单验证
       addNavRules: {
@@ -151,7 +155,7 @@ export default {
   },
   methods: {
     async getNavs() { // 获取导航列表
-      const { data: res } = await this.$http.get('getNavs?page=' + this.pagenum)
+      const { data: res } = await this.$http.post('getNavs?page=' + this.pagenum,this.$qs.stringify(this.setParam()))
       if (res.code === 200) {
         this.tableData = res.data
         this.total = 0
@@ -193,7 +197,7 @@ export default {
     async updateNav(con = '') {
       var _param = this.addNavForm
       if (con !== '') {
-        _param = con
+        _param = this.addParam(con)
       }
       const { data: res } = await this.$http.post('addNav', this.$qs.stringify(_param))
       if (res.code === 200) {

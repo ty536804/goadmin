@@ -105,7 +105,11 @@ export default {
         content: '',
         sort: '',
         is_show: 1,
-        com: ''
+        com: '',
+        timestamp:Date.parse(new Date()) / 1000,
+        version: "v1",
+        client: "pc",
+        sign: window.sessionStorage.getItem("sign")
       },
       addArticleRules: {
         title: [
@@ -134,7 +138,8 @@ export default {
       this.addArticleForm.nav_id = this.bposition[command].id
     },
     async getArticle(id) {
-      const { data: res } = await this.$http.post('getArticle?id='+id)
+      let _param = this.addParam({"id":id})
+      const { data: res } = await this.$http.post('getArticle',this.$qs.stringify(_param))
       if (res.code === 200) {
         this.addArticleForm.title = res.data.detail.title
         this.bposi = res.data.detail.nav.name
@@ -157,6 +162,7 @@ export default {
         if (!valid) return false
         const { data: res } = await this.$http.post('addArticle', this.$qs.stringify(this.addArticleForm))
         if (res.code === 200) {
+          this.$router.push('/news')
           return this.$message.success(res.msg)
         } else {
           return this.$message.error(res.msg)
@@ -180,6 +186,10 @@ export default {
       const form = new FormData();
       // 文件对象
       form.append("file", file);
+      form.append("timestamp", Date.parse(new Date()) / 1000);
+      form.append("version", "v1");
+      form.append("client", "pc");
+      form.append("sign", window.sessionStorage.getItem("sign"));
       var that = this;
       this.$http({
         method: "post",
